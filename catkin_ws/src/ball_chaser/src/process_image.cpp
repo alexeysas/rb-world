@@ -1,6 +1,7 @@
 #include "ros/ros.h"
 #include "ball_chaser/DriveToTarget.h"
 #include <sensor_msgs/Image.h>
+#include <vector>
 
 // Define a global client that can request services
 ros::ServiceClient client;
@@ -20,6 +21,7 @@ void drive_robot(float lin_x, float ang_z)
 void process_image_callback(const sensor_msgs::Image img)
 {
 
+    float speed = 0.5;
     uint pixelSize = img.step / img.width;
 
     //ROS_INFO_STREAM("" + std::to_string(pixelSize));
@@ -28,8 +30,9 @@ void process_image_callback(const sensor_msgs::Image img)
     int white_pixel = 255;
 
     bool whiteFound = false;
-    uint whiteX = 0;
-    uint whiteY = 0;
+    uint oneThird = img.width / 3;
+  
+    std::vector<uint> counter(img.width);
 
     for (int x = 0; x < img.width; x++)
     {
@@ -38,34 +41,30 @@ void process_image_callback(const sensor_msgs::Image img)
              uint index = (img.width * pixelSize) * y + x * pixelSize;
              if (img.data[index] == 255 && img.data[index + 1] == 255 && img.data[index + 2] == 255)
              {
-                 whiteFound = true;
-                 whiteX = x;
-                 whiteY = y;
-                 break;
+                whiteFound = true;
+                counter[x] = counter[x] + 1;          
              }
-         }
-         if (whiteFound) 
-         {
-             break;
-         }
+         }       
     }
 
-    ROS_INFO_STREAM("White pixel present" + std::to_string(whiteFound));
+    ROS_INFO_STREAM("White pixel present: " + std::to_string(whiteFound));
    
-    uint oneThird = img.width / 3;
+    int argmax = std::distance(counter.begin(), std::max_element(counter.begin(), counter.end()));
+               
+  
     if (whiteFound) 
     {
-        if (whiteX < oneThird)
+        if (argmax < oneThird)
         {
-            drive_robot(0.0, 0.5);
+            drive_robot(0.0, speed);
         }
-        else if (whiteX < 2 * oneThird)
+        else if (argmax < 2 * oneThird)
         {
-            drive_robot(0.5, 0.0);
+            drive_robot(speed, 0.0);
         }
         else 
         {
-            drive_robot(0.0, -0.5);
+            drive_robot(0.0, -speed);
         }
     }
     else 
