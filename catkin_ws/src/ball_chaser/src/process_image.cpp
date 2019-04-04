@@ -21,7 +21,8 @@ void drive_robot(float lin_x, float ang_z)
 void process_image_callback(const sensor_msgs::Image img)
 {
 
-    float speed = 0.5;
+    float max_speed = 0.2;
+    float max_angular_speed = 0.5;
     uint pixelSize = img.step / img.width;
 
     //ROS_INFO_STREAM("" + std::to_string(pixelSize));
@@ -50,22 +51,14 @@ void process_image_callback(const sensor_msgs::Image img)
     ROS_INFO_STREAM("White pixel present: " + std::to_string(whiteFound));
    
     int argmax = std::distance(counter.begin(), std::max_element(counter.begin(), counter.end()));
-               
-  
+
+    int diff = img.width / 2 - argmax;
+    float x_speed = max_speed * (float)(img.width / 2 - abs(diff)) / (float)(img.width / 2);
+    float angular_speed = max_angular_speed * (diff / (float)(img.width / 2));
+
     if (whiteFound) 
     {
-        if (argmax < oneThird)
-        {
-            drive_robot(0.0, speed);
-        }
-        else if (argmax < 2 * oneThird)
-        {
-            drive_robot(speed, 0.0);
-        }
-        else 
-        {
-            drive_robot(0.0, -speed);
-        }
+        drive_robot(x_speed, angular_speed);
     }
     else 
     {
