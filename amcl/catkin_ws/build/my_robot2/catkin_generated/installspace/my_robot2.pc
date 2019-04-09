@@ -1,0 +1,8 @@
+prefix=/home/workspace/rb-world/amcl/catkin_ws/install
+
+Name: my_robot2
+Description: Description of my_robot2
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/workspace/rb-world/amcl/catkin_ws/install/lib 
+Requires: 

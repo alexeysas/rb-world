@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/workspace/rb-world/amcl/catkin_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_977df/fast"
+/usr/bin/make -f CMakeFiles/cmTC_977df.dir/build.make CMakeFiles/cmTC_977df.dir/build
+make[1]: Entering directory '/home/workspace/rb-world/amcl/catkin_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_977df.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_977df.dir/CheckSymbolExists.c.o   -c /home/workspace/rb-world/amcl/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_977df
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_977df.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_977df.dir/CheckSymbolExists.c.o  -o cmTC_977df -rdynamic 
+CMakeFiles/cmTC_977df.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_977df.dir/build.make:97: recipe for target 'cmTC_977df' failed
+make[1]: *** [cmTC_977df] Error 1
+make[1]: Leaving directory '/home/workspace/rb-world/amcl/catkin_ws/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_977df/fast' failed
+make: *** [cmTC_977df/fast] Error 2
+
+File /home/workspace/rb-world/amcl/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/workspace/rb-world/amcl/catkin_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_30068/fast"
+/usr/bin/make -f CMakeFiles/cmTC_30068.dir/build.make CMakeFiles/cmTC_30068.dir/build
+make[1]: Entering directory '/home/workspace/rb-world/amcl/catkin_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_30068.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_30068.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_30068
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30068.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_30068.dir/CheckFunctionExists.c.o  -o cmTC_30068 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_30068.dir/build.make:97: recipe for target 'cmTC_30068' failed
+make[1]: *** [cmTC_30068] Error 1
+make[1]: Leaving directory '/home/workspace/rb-world/amcl/catkin_ws/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_30068/fast' failed
+make: *** [cmTC_30068/fast] Error 2
+
+

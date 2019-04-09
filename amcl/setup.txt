@@ -1,0 +1,30 @@
+$ sudo apt-get install ros-kinetic-navigation
+$ sudo apt-get install ros-kinetic-map-server
+$ sudo apt-get install ros-kinetic-move-base
+$ sudo apt-get install ros-kinetic-amcl
+
+cd catkin_ws
+catkin_make
+source devel/setup.bash
+
+#Map setup
+$ cd /home/workspace/catkin_ws/src/<YOUR PACKAGE NAME>
+$ mkdir maps
+
+$ cd /home/workspace/catkin_ws/src/<YOUR PACKAGE NAME>
+$ mkdir maps
+
+#dependencies
+sudo apt-get install libignition-math2-dev protobuf-compiler
+
+git clone https://github.com/udacity/pgm_map_creator.git
+
+cd ..
+catkin_make
+
+#copy map and insert plugin line
+
+#create pgm map
+
+gzserver src/pgm_map_creator/world/<YOUR GAZEBO WORLD FILE>
+roslaunch pgm_map_creator request_publisher.launch
