@@ -1,0 +1,8 @@
+prefix=/home/workspace/rb-world/kalman/catkin_ws/devel
+
+Name: turtlebot_gazebo
+Description: Description of turtlebot_gazebo
+Version: 2.2.3
+Cflags: 
+Libs: -L/home/workspace/rb-world/kalman/catkin_ws/devel/lib 
+Requires: 

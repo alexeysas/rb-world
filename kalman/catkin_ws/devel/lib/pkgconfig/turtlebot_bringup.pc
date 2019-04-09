@@ -1,0 +1,8 @@
+prefix=/home/workspace/rb-world/kalman/catkin_ws/devel
+
+Name: turtlebot_bringup
+Description: Description of turtlebot_bringup
+Version: 2.4.2
+Cflags: 
+Libs: -L/home/workspace/rb-world/kalman/catkin_ws/devel/lib 
+Requires: 
