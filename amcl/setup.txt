@@ -28,3 +28,8 @@ catkin_make
 
 gzserver src/pgm_map_creator/world/<YOUR GAZEBO WORLD FILE>
 roslaunch pgm_map_creator request_publisher.launch
+
+
+#launch world and amcl
+roslaunch my_robot2 world.launch
+roslaunch my_robot2 amcl.launch

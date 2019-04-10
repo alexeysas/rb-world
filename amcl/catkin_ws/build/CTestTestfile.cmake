@@ -7,4 +7,3 @@
 subdirs(gtest)
 subdirs(my_robot2)
 subdirs(ball_chaser)
-subdirs(pgm_map_creator)

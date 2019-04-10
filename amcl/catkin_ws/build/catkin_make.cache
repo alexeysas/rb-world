@@ -1,2 +1,2 @@
-ball_chaser:my_robot2:pgm_map_creator
+ball_chaser:my_robot2
 -DCATKIN_DEVEL_PREFIX=/home/workspace/rb-world/amcl/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/workspace/rb-world/amcl/catkin_ws/install -G Unix Makefiles

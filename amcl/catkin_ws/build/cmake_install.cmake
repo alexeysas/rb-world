@@ -119,7 +119,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/workspace/rb-world/amcl/catkin_ws/build/gtest/cmake_install.cmake")
   include("/home/workspace/rb-world/amcl/catkin_ws/build/my_robot2/cmake_install.cmake")
   include("/home/workspace/rb-world/amcl/catkin_ws/build/ball_chaser/cmake_install.cmake")
-  include("/home/workspace/rb-world/amcl/catkin_ws/build/pgm_map_creator/cmake_install.cmake")
 
 endif()
 
