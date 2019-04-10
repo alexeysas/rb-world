@@ -26,10 +26,11 @@ catkin_make
 
 #create pgm map
 
-gzserver src/pgm_map_creator/world/<YOUR GAZEBO WORLD FILE>
+gzserver src/pgm_map_creator/world/world.world
 roslaunch pgm_map_creator request_publisher.launch
 
 
 #launch world and amcl
 roslaunch my_robot2 world.launch
 roslaunch my_robot2 amcl.launch
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py

@@ -12,9 +12,11 @@
   <param name="global_frame_id" value="map"/>
   <param name="initial_pose_x" value="0.2"/>
   <param name="initial_pose_y" value="-1.3"/>
-
+ 
  <param name="transform_tolerance" value="0.2"/>
-  
+ <param name="laser_likelihood_max_dist" value="3.0"/>
+<param name="laser_max_beams" value="50"/>
+
 </node>
 
 <node name="move_base" pkg="move_base" type="move_base" respawn="false" output="screen">
