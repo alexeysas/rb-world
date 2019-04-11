@@ -11,13 +11,15 @@
   <param name="base_frame_id" value="robot_footprint"/>
   <param name="global_frame_id" value="map"/>
   <param name="initial_pose_x" value="-1.8"/>
-  <param name="initial_pose_y" value="1"/>
+  <param name="initial_pose_y" value="2"/> 
  
  <param name="transform_tolerance" value="0.2"/>
- <param name="laser_likelihood_max_dist" value="0.1"/>
-<param name="laser_max_beams" value="10"/>
-<param name="min_particles" value="500"/>
-<param name="max_particles" value="2000"/>
+ <param name="laser_likelihood_max_dist" value="4"/>
+<param name="laser_max_beams" value="30"/>
+<param name="min_particles" value="100"/>
+<param name="max_particles" value="5000"/>
+
+<param name="update_min_d" value="0.1"/>
 
 </node>
 
@@ -32,5 +34,7 @@
  <rosparam file="$(find my_robot2)/config/base_local_planner_params.yaml" command="load" />
 
 </node>
+
+<node pkg="rosservice" type="rosservice" name="global_loc" args="call --wait /global_localization"/>
 
 </launch>
