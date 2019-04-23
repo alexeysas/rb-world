@@ -44,6 +44,16 @@
       <geometry>
         <sphere radius="0.0249"/>
       </geometry>
+        <surface>
+        <friction>
+          <ode>
+            <mu>0</mu>
+            <mu2>0</mu2>
+            <slip1>1.0</slip1>
+            <slip2>1.0</slip2>
+          </ode>
+        </friction>
+      </surface>
     </collision>
 
     <visual name='back_caster_visual'>
@@ -72,6 +82,16 @@
       <geometry>
         <sphere radius="0.0249"/>
       </geometry>
+        <surface>
+        <friction>
+          <ode>
+            <mu>0</mu>
+            <mu2>0</mu2>
+            <slip1>1.0</slip1>
+            <slip2>1.0</slip2>
+          </ode>
+        </friction>
+      </surface>
     </collision>
 
     <visual name='front_caster_visual'>
@@ -170,7 +190,7 @@
 <link name='camera'>
  <pose>0 0 0 0 0 0</pose>
       <inertial>
-      <mass value="0.1"/>
+      <mass value="0"/>
       <origin xyz="0.05 0.05 0.05" rpy="0 0 0"/>
       <inertia
           ixx="1e-6" ixy="0" ixz="0"
@@ -203,7 +223,7 @@
 
  <joint name="camera_optical_joint" type="fixed">
     <origin xyz="0 0 0" rpy="-1.5707 0 -1.5707"/>
-    <parent link="camera_link"/>
+    <parent link="camera"/>
     <child link="camera_link_optical"/>
   </joint>
 
@@ -214,7 +234,7 @@
 <link name='hokuyo_base'>
   <pose>0 0 0 0 0 0</pose>
       <inertial>
-      <mass value="1e-5"/>
+      <mass value="0"/>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <inertia
           ixx="1e-6" ixy="0" ixz="0"
