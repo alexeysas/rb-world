@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ball_chaser_generate_messages_eus"
-  "/home/workspace/rb-world/map/catkin_ws/devel/share/roseus/ros/ball_chaser/srv/DriveToTarget.l"
-  "/home/workspace/rb-world/map/catkin_ws/devel/share/roseus/ros/ball_chaser/manifest.l"
+  "/home/asas/workspace/rb-world/map/catkin_ws/devel/share/roseus/ros/ball_chaser/srv/DriveToTarget.l"
+  "/home/asas/workspace/rb-world/map/catkin_ws/devel/share/roseus/ros/ball_chaser/manifest.l"
 )
 
 # Per-language clean rules from dependency scanning.

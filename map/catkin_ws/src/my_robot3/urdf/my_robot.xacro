@@ -42,7 +42,7 @@
     <collision name='back_caster_collision'>
       <origin xyz="-0.15 0 -0.175" rpy=" 0 0 0"/>
       <geometry>
-        <sphere radius="0.0249"/>
+        <sphere radius="0.0248"/>
       </geometry>
         <surface>
         <friction>
@@ -80,7 +80,7 @@
     <collision name='front_caster_collision'>
       <origin xyz="0.15 0 -0.175" rpy=" 0 0 0"/>
       <geometry>
-        <sphere radius="0.0249"/>
+        <sphere radius="0.0248"/>
       </geometry>
         <surface>
         <friction>

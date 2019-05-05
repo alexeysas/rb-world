@@ -7,8 +7,10 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/workspace/rb-world/map/catkin_ws/devel:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/workspace/rb-world/map/catkin_ws/devel/lib:$LD_LIBRARY_PATH"
-export PWD="/home/workspace/rb-world/map/catkin_ws/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/workspace/rb-world/map/catkin_ws/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/home/workspace/rb-world/map/catkin_ws/src:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/asas/workspace/rb-world/map/catkin_ws/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/asas/workspace/rb-world/map/catkin_ws/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/asas/workspace/rb-world/map/catkin_ws/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PWD="/home/asas/workspace/rb-world/map/catkin_ws/build"
+export PYTHONPATH="/home/asas/workspace/rb-world/map/catkin_ws/devel/lib/python2.7/dist-packages:$PYTHONPATH"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/asas/workspace/rb-world/map/catkin_ws/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/workspace/rb-world/map/catkin_ws/src:/home/asas/workspace/rb-world/map/catkin_ws/src:$ROS_PACKAGE_PATH"

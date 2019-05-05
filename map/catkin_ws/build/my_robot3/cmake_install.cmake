@@ -1,8 +1,8 @@
-# Install script for directory: /home/workspace/rb-world/map/catkin_ws/src/my_robot3
+# Install script for directory: /home/asas/workspace/rb-world/map/catkin_ws/src/my_robot3
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/workspace/rb-world/map/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/asas/workspace/rb-world/map/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/workspace/rb-world/map/catkin_ws/build/my_robot3/catkin_generated/installspace/my_robot3.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/asas/workspace/rb-world/map/catkin_ws/build/my_robot3/catkin_generated/installspace/my_robot3.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot3/cmake" TYPE FILE FILES
-    "/home/workspace/rb-world/map/catkin_ws/build/my_robot3/catkin_generated/installspace/my_robot3Config.cmake"
-    "/home/workspace/rb-world/map/catkin_ws/build/my_robot3/catkin_generated/installspace/my_robot3Config-version.cmake"
+    "/home/asas/workspace/rb-world/map/catkin_ws/build/my_robot3/catkin_generated/installspace/my_robot3Config.cmake"
+    "/home/asas/workspace/rb-world/map/catkin_ws/build/my_robot3/catkin_generated/installspace/my_robot3Config-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot3" TYPE FILE FILES "/home/workspace/rb-world/map/catkin_ws/src/my_robot3/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot3" TYPE FILE FILES "/home/asas/workspace/rb-world/map/catkin_ws/src/my_robot3/package.xml")
 endif()
 

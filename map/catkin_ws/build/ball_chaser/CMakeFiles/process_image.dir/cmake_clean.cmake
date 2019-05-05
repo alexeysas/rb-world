@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/process_image.dir/src/process_image.cpp.o"
-  "/home/workspace/rb-world/map/catkin_ws/devel/lib/ball_chaser/process_image.pdb"
-  "/home/workspace/rb-world/map/catkin_ws/devel/lib/ball_chaser/process_image"
+  "/home/asas/workspace/rb-world/map/catkin_ws/devel/lib/ball_chaser/process_image.pdb"
+  "/home/asas/workspace/rb-world/map/catkin_ws/devel/lib/ball_chaser/process_image"
 )
 
 # Per-language clean rules from dependency scanning.
