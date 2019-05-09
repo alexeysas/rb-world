@@ -26,7 +26,7 @@ We provided this package with [map](catkin_ws/src/map/my_map.pgm) built with **g
 
 **[move_base](http://wiki.ros.org/move_base), [costmap_2d](http://wiki.ros.org/costmap_2d]) and other** packages from the [Navigation stack:](http://wiki.ros.org/turtlebot_navigation/Tutorials/Setup%20the%20Navigation%20Stack%20for%20TurtleBot) provides navigation abilities including setting navigation gaols, plan the path using variant of the Uniform Cost Search algorithm and folow the path to goal.
 
-Localization with navigation can be tested using this [script](catkin_ws/src/script/test_navigation.sh) 
+Localization with navigation can be tested using this [script](catkin_ws/src/scripts/test_navigation.sh) 
 
 **Finnaly, two custom nodes were implemented:**
 
