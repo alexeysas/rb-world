@@ -41,9 +41,9 @@ Localization with navigation can be tested using this [script](/catkin_ws/src/sc
 
 * Install [TurtleBot](http://wiki.ros.org/action/fullsearch/Robots/TurtleBot?action=fullsearch&context=180&value=linkto%3A%22Robots%2FTurtleBot%22).  You can use [script](/catkin_ws/src/scripts/turtlebot_install.sh) provided to fully install turtlebot
 
-* '''
+* ```
 clone https://github.com/alexeysas/rb-world
 cd rb-world/home/catkin_ws
 catkin_make
 src/scripts/home_service.sh
-'''
+```
