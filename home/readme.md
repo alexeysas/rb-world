@@ -3,6 +3,7 @@ The goal of the project is to deploy robot to the the virtual home environment, 
 
 
 ## Solution Summary
+
 This project is implemented using  following ROS packages:
 
 **[turtlebot_teleop](http://wiki.ros.org/turtlebot_teleop)**: The package provides turtlebot with ability for teleoperation with different input devices.
@@ -12,7 +13,7 @@ This project is implemented using  following ROS packages:
 **[turtlebot_rviz_launchers](http://wiki.ros.org/turtlebot_rviz_launchers)**: Provides predefined rviz configs for visualisation and interactions for the TurtleBot
 
 
-**Navigation stack**
+**Mapping, Localization and Navigation is controlled by [Navigation stack:](http://wiki.ros.org/turtlebot_navigation/Tutorials/Setup%20the%20Navigation%20Stack%20for%20TurtleBot)**
 
 
 **[gmapping](http://wiki.ros.org/gmapping)**: [Open SLAM](https://openslam-org.github.io/gmapping.html) based package to build grid maps from the laser range data.
@@ -21,25 +22,24 @@ Following [script](/catkin_ws/src/scripts/test_slam.sh) can be used to deploy a 
 
 **[amcl](http://wiki.ros.org/amcl)**: amcl is a probabilistic localization system for a robot moving in 2D. It implements the adaptive  Monte Carlo localization approach which uses a particle filter to track the pose of a robot against a known map. 
 
-We provided this package with [map](/catkin_ws/src/map/my_map.pgm) built with **gmapping** package. Localization with navigation can be tested using this [script](/catkin_ws/src/script/test_navigation.sh) 
+We provided this package with [map](/catkin_ws/src/map/my_map.pgm) built with **gmapping** package.
+
+**[move_base](http://wiki.ros.org/move_base), [costmap_2d](http://wiki.ros.org/costmap_2d]) and other** packages from the [Navigation stack:](http://wiki.ros.org/turtlebot_navigation/Tutorials/Setup%20the%20Navigation%20Stack%20for%20TurtleBot) provides navigation abilities including setting navigation gaols, plan the path using variant of the Uniform Cost Search algorithm and folow the path to goal.
+
+Localization with navigation can be tested using this [script](/catkin_ws/src/script/test_navigation.sh) 
+
+**Finnaly, two custom nodes were implemented:**
+
+**pick_object**: a node that will communicate with the ROS navigation stack and autonomously send successive goals for robot to reach.
+
+**add_markers**: Simulating virtual objects with markers to provide fancy visualization for the picked object.
+
+
+## Getting started
 
 
 
-http://wiki.ros.org/turtlebot_navigation/Tutorials/Setup%20the%20Navigation%20Stack%20for%20TurtleBot
 http://wiki.ros.org/action/fullsearch/Robots/TurtleBot?action=fullsearch&context=180&value=linkto%3A%22Robots%2FTurtleBot%22
-
-
-
-Following [script](/catkin_ws/src/scripts/test_slam.sh) can be used to deploy a turtlebot inside the environment, interface it with a SLAM package, control it to build map and visualize the map in rviz.
-
-
-
-
-gmapping: With the gmapping_demo.launch file, you can easily perform SLAM and build a map of the environment with a robot equipped with laser range finder sensors or RGB-D cameras.
-turtlebot_teleop: With the keyboard_teleop.launch file, you can manually control a robot using keyboard commands.
-turtlebot_rviz_launchers: With the view_navigation.launch file, you can load a preconfigured rviz workspace. You’ll save a lot of time by launching this file, because it will automatically load the robot model, trajectories, and map for you.
-turtlebot_gazebo: With the turtlebot_world.launch you can deploy a turtlebot in a gazebo environment by linking the world file to it.
-
 
 
 This repository includes two files that can be used to set up and intall uWebSocketIO for either Linux or Mac systems. For windows you can use either Docker, VMware, or even Windows 10 Bash on Ubuntu to install uWebSocketIO.
