@@ -1,0 +1,11 @@
+<launch>
+  <node pkg="add_markers" type="add_markers_node" name="add_markers"  output="screen">
+    <param name="start_x" value="4.43" type="double"/>
+    <param name="start_y" value="3.02" type="double"/>
+    <param name="start_yaw" value="3.14" type="double"/>
+    <param name="end_x" value="-5.62" type="double"/>
+    <param name="end_y" value="-1.94" type="double"/>
+    <param name="end_yaw" value="0" type="double"/>
+    <param name="demo" value="demo" type="string"/>
+  </node>
+</launch>
