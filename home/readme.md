@@ -5,10 +5,6 @@ The goal of the project is to deploy robot to the the virtual home environment, 
 ## Solution Summary
 This project is implemented using  following ROS packages:
 
-**[gmapping](http://wiki.ros.org/gmapping)**: [Open SLAM](https://openslam-org.github.io/gmapping.html) based package to build grid maps from the laser range data.
-
-Following [script](/catkin_ws/src/scripts/test_slam.sh) can be used to deploy a turtlebot inside the environment, interface it with a SLAM package, control it to build map and visualize the map in rviz.
-
 **[turtlebot_teleop](http://wiki.ros.org/turtlebot_teleop)**: The package provides turtlebot with ability for teleoperation with different input devices.
 
 **[turtlebot_gazebo](http://wiki.ros.org/turtlebot_gazebo)**: Provides sample worlds and launch files which allows to deploy turtlebot to sample or custom gazebo worlds
@@ -16,12 +12,20 @@ Following [script](/catkin_ws/src/scripts/test_slam.sh) can be used to deploy a 
 **[turtlebot_rviz_launchers](http://wiki.ros.org/turtlebot_rviz_launchers)**: Provides predefined rviz configs for visualisation and interactions for the TurtleBot
 
 
+**Navigation stack**
+
+
+**[gmapping](http://wiki.ros.org/gmapping)**: [Open SLAM](https://openslam-org.github.io/gmapping.html) based package to build grid maps from the laser range data.
+
+Following [script](/catkin_ws/src/scripts/test_slam.sh) can be used to deploy a turtlebot inside the environment, interface it with a SLAM package, control it to build map and visualize the map in rviz.
+
+**[amcl](http://wiki.ros.org/amcl)**: amcl is a probabilistic localization system for a robot moving in 2D. It implements the adaptive  Monte Carlo localization approach which uses a particle filter to track the pose of a robot against a known map. 
+
+We provided this package with [map](/catkin_ws/src/map/my_map.pgm) built with **gmapping** package. Localization with navigation can be tested using this [script](/catkin_ws/src/script/test_navigation.sh) 
 
 
 
-
-
-
+http://wiki.ros.org/turtlebot_navigation/Tutorials/Setup%20the%20Navigation%20Stack%20for%20TurtleBot
 http://wiki.ros.org/action/fullsearch/Robots/TurtleBot?action=fullsearch&context=180&value=linkto%3A%22Robots%2FTurtleBot%22
 
 
